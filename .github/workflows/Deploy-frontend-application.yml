@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up QEMU
-        uses: docker/setup-build-action@v2
+        uses: docker/setup-qemu-action@v2
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -24,7 +24,7 @@ jobs:
 
       - name: prepare the docker-compose run
         run: |
-          ls -l
+              ls -l
 
       - name: Build and push
         uses: docker/build-push-action@v4
@@ -43,7 +43,7 @@ jobs:
           source: "docker-compose.yml"
           target: "/home/ubuntu/frontend"
 
-      - name: docker copose
+      - name: docker compose
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{secrets.HOST_SERVER}}
