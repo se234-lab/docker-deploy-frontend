@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-LABEL authors="baek"
 
 ENTRYPOINT ["top", "-b"]
 
