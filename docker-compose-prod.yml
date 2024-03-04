@@ -4,3 +4,4 @@ services:
     image: spineplug81/234-deploylab-frontend:latest
     ports:
       - "9999:80"
+
